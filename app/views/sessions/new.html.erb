@@ -1,0 +1,23 @@
+<div class="login-title">
+	<p> Realizar login </p>
+</div>
+
+<%= flash_message %>
+
+<div class="login-form">
+	<div class="login-form-title">
+		<span>entre na sua conta</span>
+	</div>
+	<%= form_tag login_path do %>
+	
+		<%= text_field_tag :login, params[:login], placeholder: "Email ou Login", class: "login-form-field"%>
+		</br>
+
+		<%= password_field_tag :password, params[:password], placeholder: "Senha", class: "login-form-field"%>
+
+		</br></br>
+
+		<%= submit_tag "Entrar", class: "login-form-button" %>
+
+	<% end %>
+</div>
