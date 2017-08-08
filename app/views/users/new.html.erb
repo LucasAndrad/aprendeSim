@@ -1,0 +1,37 @@
+<div class="user-register-title">
+	<p> cadastrar usuário </p>
+</div>
+
+<%= flash_message %>
+
+<div class="login-form">
+	<div class="login-form-title">
+		<span> preencha o formulário abaixo </span>
+	</div>
+	<%= form_for @user, url: {action: 'create'} do |f| %>
+
+		<% @user.errors.messages.values.each do |msg| %>
+			<% msg.each do |m| %>
+				<li> <%= m %></li>
+			<% end %>
+		<% end %>
+
+		<%= f.text_field :name, placeholder: 'Nome', class: "login-form-field"%> </br>
+
+		<%= f.text_field :login, placeholder: 'Login', class: "login-form-field" %> </br>
+		<%= f.text_field :email, placeholder: 'Email', class: "login-form-field" %> </br>
+
+		<%= f.text_field :email_confirmation, placeholder: 'Confirme seu email', class: "login-form-field" %> </br>
+
+		<%= f.password_field :password, placeholder: 'Senha', class: "login-form-field" %> </br>
+
+		<%= f.password_field :password_confirmation, placeholder: 'Confirme sua senha', class: "login-form-field" %>
+</br>
+
+		</br></br>
+
+		<%= f.submit 'Salvar Cadastro', class: "regiter-save-button" %>
+
+	<% end %>
+
+</div>

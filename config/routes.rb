@@ -5,6 +5,14 @@ Rails.application.routes.draw do
   root 'pages#home', as: 'home'
   get 'about' => 'pages#about', as: 'about'
 
+# Users
+  get 'register' => 'users#new', as: 'register'
+  get 'perfil' => 'users#show', as: 'perfil'
+  patch 'update_password' => 'users#update_password'
+  patch 'user_destroy' => 'users#destroy'
+  post 'users/create' => 'users#create'
+  get 'users/destroy'
+
 # Sessions
   get 'login' => 'sessions#new', as: 'login'
   post 'login' => 'sessions#create'

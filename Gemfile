@@ -6,6 +6,13 @@ git_source(:github) do |repo_name|
 end
 
 
+# Bcrypt to protect password in login
+gem 'bcrypt', :require => 'bcrypt'
+
+# simplecov for coverage
+gem 'simplecov', :require => false, :group => :test
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
 # Use postgresql as the database for Active Record
