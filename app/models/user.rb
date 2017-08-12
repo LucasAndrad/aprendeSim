@@ -1,8 +1,7 @@
 class User < ApplicationRecord
 
-  # after_initialize :init, if: :new_record?
-  # after_initialize :second_user, if: :new_record?
-  # after_initialize :first_user, if: :new_record?
+  after_initialize :init, if: :new_record?
+  after_initialize :first_user, if: :new_record?
 
   has_secure_password
   has_many :feedbacks
@@ -47,17 +46,16 @@ class User < ApplicationRecord
 
 # Methods to define users type before create
 
-  # def init
-  #   self.assistant ||= false
-  #   self.admin ||= false
-  #   self.active ||= true
-  # end
+  def init
+    self.admin ||= false
+  end
 
-  # def first_user
-  #   if User.count == 0
-  #     self.admin ||= true
-  #   else
-  #   end
-  # end
+  def first_user
+    if User.count == 0
+      self.admin ||= true
+    else
+      self.admin ||= false
+    end
+  end
 
 end

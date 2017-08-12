@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :check_log_in, only: [:new, :create, :show, :update_password, :destroy]
   
   def new
     if !logged_in?
@@ -54,8 +55,14 @@ class UsersController < ApplicationController
 
   private
 
+  def check_users
+    if User.count > 1
+      redirect_to home_path
+    end
+  end
+
   def user_params
-    params.require(:user).permit(:name, :login, :photo_profile, :email, 
+    params.require(:user).permit(:name, :login, :email, 
       :email_confirmation, :password, :password_confirmation)
   end
 
