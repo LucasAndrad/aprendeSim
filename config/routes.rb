@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   root 'pages#home', as: 'home'
   get 'about' => 'pages#about', as: 'about'
 
+# Posts
+  resources :posts, param: :url
+
 # Users
   get 'register' => 'users#new', as: 'register'
   get 'perfil' => 'users#show', as: 'perfil'

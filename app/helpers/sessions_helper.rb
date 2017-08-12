@@ -4,7 +4,9 @@ module SessionsHelper
 
     # return the current user logged in
     def current_user
-      @current_user ||= User.find(session[:user_id]) if session[:user_id]
+      if User.count > 0
+        @current_user ||= User.find(session[:user_id]) if session[:user_id]
+      end
     end
 
     # Returns true if user is logged in, else return false
