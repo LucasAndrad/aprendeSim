@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :front_image %>
+    <%= form.text_field :front_image, id: :post_front_image %>
+  </div>
+
+  <div class="field">
     <%= form.label :url %>
     <%= form.text_field :url, id: :post_url %>
   </div>
@@ -24,6 +29,11 @@
   <div class="field">
     <%= form.label :body %>
     <%= form.text_area :body, id: :post_body %>
+  </div>
+
+  <div class="field">
+    <%= form.label :intro_text %>
+    <%= form.text_area :intro_text, id: :post_intro_text %>
   </div>
 
   <div class="actions">

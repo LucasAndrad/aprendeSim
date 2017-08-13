@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :check_log_in, only: [:new, :create, :show, :update_password, :destroy]
+  before_action :check_users, only: [:new, :create, :show, :update_password, :destroy]
   
   def new
     if !logged_in?

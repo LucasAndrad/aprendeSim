@@ -4,6 +4,7 @@
 
 <% if logged_in? %>
 	Bem vindo: <%= current_user.name %>
-	<%= link_to 'Perfil', perfil_path %>
+	<%= link_to 'Painel', managements_index_path %>
+	<%= link_to 'Account', perfil_path %>
 	<%= link_to 'Sair', logout_path %>
 <% end %>
