@@ -68,6 +68,7 @@ class CategoriesController < ApplicationController
         redirect_to home_path
       end
     end
+    
     # Use callbacks to share common setup or constraints between actions.
     def set_category
       @category = Category.find(params[:id])
