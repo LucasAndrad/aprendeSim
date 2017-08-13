@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   resources :categories
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+# Managements
+  get 'managements/index' => 'managements#index', as: 'managements_index'
+
 # Pages
   root 'pages#home', as: 'home'
   get 'about' => 'pages#about', as: 'about'
