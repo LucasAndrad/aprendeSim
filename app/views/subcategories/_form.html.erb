@@ -16,6 +16,10 @@
     <%= form.text_field :name, id: :subcategory_name %>
   </div>
 
+  </br>
+  <%= form.select :category_id, Category.all.collect {|c| [c.name, c.id]} %>
+  </br>
+
   <div class="actions">
     <%= form.submit %>
   </div>
