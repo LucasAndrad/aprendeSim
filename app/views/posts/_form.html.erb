@@ -17,10 +17,12 @@
   </div>
 
   </br>
+    <%= form.label "Category" %>
     <%= form.select :category_id, @categories.collect {|c| [c.name, c.id]}, {}, { id: 'select-category' } %>
   </br>
 
   </br>
+    <%= form.label "Subcategory" %>
     <%= form.select :subcategory_id, @subcategories.collect {|s| [s.name, s.id]} %>
   </br>
 

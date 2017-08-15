@@ -22,6 +22,8 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    @subcategories = Subcategory.all.order(:name)
+    @categories = Category.all.order(:name)
   end
 
   # POST /posts
