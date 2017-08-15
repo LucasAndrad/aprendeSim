@@ -27,8 +27,12 @@ ActiveRecord::Schema.define(version: 20170813201758) do
     t.string "front_image"
     t.text "intro_text"
     t.text "body"
+    t.bigint "category_id"
+    t.bigint "subcategory_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_posts_on_category_id"
+    t.index ["subcategory_id"], name: "index_posts_on_subcategory_id"
   end
 
   create_table "subcategories", force: :cascade do |t|

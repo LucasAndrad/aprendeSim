@@ -15,6 +15,8 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
+    @subcategories = Subcategory.all.order(:name)
+    @categories = Category.all.order(:name)
     @post = Post.new
   end
 
