@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
-  before_action :admin_user, only: [:edit, :update, :destroy]
+  before_action :admin_user, only: [:index, :edit, :update, :destroy]
 
   # GET /comments
   # GET /comments.json
@@ -30,7 +30,8 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
+        post = Post.find(@comment.post_id)
+        format.html { redirect_to post_path(post), notice: 'Seu comentário foi registrado com sucesso. Obrigado!' }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }

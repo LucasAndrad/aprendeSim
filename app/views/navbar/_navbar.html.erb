@@ -1,10 +1,22 @@
-<%= link_to 'Home', home_path %>
-<%= link_to 'Sobre Nós', about_path %>
-<%= link_to 'Posts', posts_path %>
+<nav>
+	<div class="handle-navbar">Menu</div> 
+	<ul class="navbar-menu">
+		<li> <a>  <%= link_to 'Home', home_path %> </a> </li>
+		<li> <a> <%= link_to 'Sobre Nós', about_path %> </a> </li>
+		<li> <a> <%= link_to 'Posts', posts_path %> </a> </li>
 
-<% if logged_in? %>
-	Bem vindo: <%= current_user.name %>
-	<%= link_to 'Painel', managements_index_path %>
-	<%= link_to 'Account', perfil_path %>
-	<%= link_to 'Sair', logout_path %>
-<% end %>
+		<% if logged_in? %>
+			Bem vindo: <%= current_user.name %>
+			<li> <a> <%= link_to 'Painel', managements_index_path %> </a> </li>
+			<li> <a> <%= link_to 'Account', perfil_path %> </a> </li>
+			<li> <a> <%= link_to 'Sair', logout_path %> </a> </li>
+		<% end %>
+	</ul>
+</nav>
+
+
+<script>
+  document.querySelector('.handle-navbar').onclick = function(){
+    document.querySelector('.navbar-menu').classList.toggle('showing-navbar');
+  }
+</script>
