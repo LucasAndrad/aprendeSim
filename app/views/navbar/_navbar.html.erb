@@ -1,22 +1,35 @@
 <nav>
-	<div class="handle-navbar">Menu</div> 
-	<ul class="navbar-menu">
-		<li> <a>  <%= link_to 'Home', home_path %> </a> </li>
-		<li> <a> <%= link_to 'Sobre Nós', about_path %> </a> </li>
-		<li> <a> <%= link_to 'Posts', posts_path %> </a> </li>
+	<div class="nav-fostrap">
+		<ul>
+			<li> <%= link_to 'Home', home_path %> </li>
+			<li> <%= link_to 'Sobre Nós', about_path %> </li>
+			<li> <%= link_to 'Posts', posts_path %> </li>
 
-		<% if logged_in? %>
+			<% if logged_in? %>
 			Bem vindo: <%= current_user.name %>
-			<li> <a> <%= link_to 'Painel', managements_index_path %> </a> </li>
-			<li> <a> <%= link_to 'Account', perfil_path %> </a> </li>
-			<li> <a> <%= link_to 'Sair', logout_path %> </a> </li>
-		<% end %>
-	</ul>
+			<li> <%= link_to 'Painel', managements_index_path %> </li>
+			<li> <%= link_to 'Account', perfil_path %> </li>
+			<li> <%= link_to 'Sair', logout_path %> </li>
+			<% end %>
+		</ul>
+	</div>
+	<div class="nav-bg-fostrap">
+		<div class="navbar-fostrap"> <span></span> <span></span> <span></span> </div>
+		<a class="title-mobile">Aprendi Sim</a>
+</div>
 </nav>
-
+<div class='content'>
+</div>
+</div>
+</div>
 
 <script>
-  document.querySelector('.handle-navbar').onclick = function(){
-    document.querySelector('.navbar-menu').classList.toggle('showing-navbar');
-  }
+
+	$(document).ready(function(){
+		$('.navbar-fostrap').click(function(){
+			$('.nav-fostrap').toggleClass('visible');
+			$('body').toggleClass('cover-bg');
+		});
+	});
+
 </script>
