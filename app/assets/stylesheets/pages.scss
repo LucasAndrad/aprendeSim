@@ -10,6 +10,19 @@ body {
 	margin: 0;
 }
 
-.application-bod {
-	margin: 1.5%;
+.body-container {
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+@media only screen and (max-width:750px) {
+	.body-container {
+		margin-top: 15%;
+	}
+}
+
+@media only screen and (max-width:470px) {
+	.body-container {
+		margin-top: 25%;
+	}
 }

@@ -1,13 +1,14 @@
 .nav-fostrap {
   display: block;
   margin-bottom: 15px 0;
-  background: #03A9F4;
+  background: #FFFFFF;
+  transition: border-top .3s;
+  border-bottom: 2px solid dodgerblue;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   -ms-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   -o-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  border-radius: 3px;
 }
 
 .nav-fostrap ul {
@@ -23,22 +24,25 @@
   padding: 0;
   display: inline-block;
   position: relative;
-  font-size: 14;
-  color: #def1f0;
+}
+
+
+.nav-fostrap-link {
+  text-decoration: none;
 }
 
 .nav-fostrap li a {
   padding: 15px 20px;
   font-size: 14;
-  color: #def1f0;
+  color: #777777;
   display: inline-block;
+  border-top: 4px solid white;
   outline: 0;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .nav-fostrap li:hover a {
-  background: #2980B9;
-  color: #fff !important;
+  border-top: 4px solid dodgerblue;
 }
 
 .nav-fostrap li:first-child:hover a { border-radius: 3px 0 0 3px; }
@@ -59,7 +63,7 @@
 .title-mobile {
   display: none;
 }
- @media only screen and (max-width:900px) {
+ @media only screen and (max-width:750px) {
 
 .nav-fostrap {
   background: #fff;
@@ -81,16 +85,18 @@
   overflow-x: hidden;
   height: 100%;
 }
+
 .title-mobile {
   position: fixed;
   display: block;
-    top: 10px;
-    font-size: 20px;
-    left: 100px;
-    right: 100px;
-    text-align: center;
-    color: #FFF;
+  top: 3%;
+  font-size: 110%;
+  left: 100px;
+  right: 100px;
+  text-align: center;
+  color: dodgerblue;
 }
+
 .nav-fostrap.visible {
   left: 0px;
   -webkit-transition: left 0.25s ease;
@@ -110,7 +116,10 @@
   top: 0px;
   left: 0px;
   background: #03A9F4;
-  padding: 12px 0 0 10px;
+  color: dodgerblue;
+  background-color: white;
+  border-bottom: 2px solid dodgerblue;
+  padding: 2% 0 0 0;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   -ms-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -124,10 +133,10 @@
   height: 50px;
   cursor: pointer;
   margin: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 12px;
 }
 
 .navbar-fostrap span {
@@ -142,7 +151,13 @@
 
 .navbar-fostrap span:nth-child(3) { width: 20px; }
 
-.nav-fostrap ul { padding-top: 50px; }
+.nav-fostrap ul { 
+  margin-top: 6%;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding-top: 50px;
+}
 
 .nav-fostrap li { display: block; }
 
@@ -187,7 +202,8 @@
 }
  @media only screen and (max-width:1199px) {
 
-.container { width: 96%; }
+  .container { width: 96%; }
+
 }
 
 .fixed-top {
@@ -195,4 +211,10 @@
   top: 0;
   right: 0;
   left: 0;
+}
+
+@media only screen and (max-width:340px) {
+  .title-mobile {
+    font-size: 95%;
+  }
 }
