@@ -6,10 +6,10 @@
 			<li> <%= link_to 'POSTS', posts_path, class: 'nav-fostrap-link' %> </li>
 
 			<% if logged_in? %>
-			Bem vindo: <%= current_user.name %>
-			<li> <%= link_to 'Painel', managements_index_path, class: 'nav-fostrap-link' %> </li>
-			<li> <%= link_to 'Account', perfil_path, class: 'nav-fostrap-link' %> </li>
-			<li> <%= link_to 'Sair', logout_path, class: 'nav-fostrap-link' %> </li>
+				Bem vindo: <%= current_user.name %>
+				<li> <%= link_to 'Painel', managements_index_path, class: 'nav-fostrap-link' %> </li>
+				<li> <%= link_to 'Account', perfil_path, class: 'nav-fostrap-link' %> </li>
+				<li> <%= link_to 'Sair', logout_path, class: 'nav-fostrap-link' %> </li>
 			<% end %>
 		</ul>
 	</div>

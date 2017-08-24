@@ -8,6 +8,7 @@ class CreatePosts < ActiveRecord::Migration[5.1]
       t.text :body
       t.belongs_to :category, index: true
       t.belongs_to :subcategory, index: true
+      t.belongs_to :author, index: true
 
       t.timestamps
     end

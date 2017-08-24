@@ -12,6 +12,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post_comments = Comment.where(post_id: @post.id)
+    @author = Author.find_by(id: @post.author_id)
     @comment = Comment.new
   end
 
@@ -19,6 +20,7 @@ class PostsController < ApplicationController
   def new
     @subcategories = Subcategory.all.order(:name)
     @categories = Category.all.order(:name)
+    @authors = Author.all.order(:name)
     @post = Post.new
   end
 
@@ -26,6 +28,7 @@ class PostsController < ApplicationController
   def edit
     @subcategories = Subcategory.all.order(:name)
     @categories = Category.all.order(:name)
+    @authors = Author.all.order(:name)
   end
 
   # POST /posts
@@ -82,6 +85,7 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :url, :body, :intro_text, :front_image)
+      params.require(:post).permit(:title, :url, :body, :intro_text, 
+        :front_image, :category_id, :subcategory_id, :author_id)
     end
 end

@@ -16,6 +16,11 @@
     <%= form.text_field :title, id: :post_title %>
   </div>
 
+   </br>
+    <%= form.label "Author" %>
+    <%= form.select :author_id, @authors.collect {|a| [a.name, a.id]}, {}, { id: 'select-author' } %>
+  </br>
+
   </br>
     <%= form.label "Category" %>
     <%= form.select :category_id, @categories.collect {|c| [c.name, c.id]}, {}, { id: 'select-category' } %>

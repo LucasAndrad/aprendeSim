@@ -6,17 +6,18 @@
 </p>
 
 <p>
-  <strong>Url:</strong>
-  <%= @post.url %>
-</p>
-
-<p>
   <strong>Body:</strong>
   <%= raw @post.body %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<% if logged_in? %>
+	<%= link_to 'Edit', edit_post_path(@post) %> |
+	<%= link_to 'Back', posts_path %>
+<% end %>
+
+<br>
+
+<%= render 'author' %>
 
 <br>
 

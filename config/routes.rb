@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :authors
   resources :comments
   resources :subcategories
   resources :categories
