@@ -2,7 +2,6 @@
   display: block;
   margin-bottom: 15px 0;
   background: #FFFFFF;
-  transition: border-top .3s;
   border-bottom: 2px solid dodgerblue;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -37,6 +36,7 @@
   color: #777777;
   display: inline-block;
   border-top: 4px solid white;
+  transition: border-top .8s;
   outline: 0;
   font-weight: 500;
 }
