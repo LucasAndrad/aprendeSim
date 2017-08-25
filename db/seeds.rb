@@ -20,6 +20,6 @@
     authors = Author.create([
       { name: 'Lucas Andrade', photo: 'http://i.imgur.com/bKgTH5z.jpg',
         description: 'Apenas um universitário, atualmente faço Engenharia de Software na Universidade de Brasília. Grande fã de Rails, e já acumulei uma experiência com Angular 2 também.' },
-      { name: 'Ana Luisa Krause', photo: 'http://i.imgur.com/cI7VGDc.jpg',
+      { name: 'Ana Luisa Krause', photo: 'http://i.imgur.com/kZoNkvO.jpg',
         description: 'Estudante do curso Farmácia '}
     ])

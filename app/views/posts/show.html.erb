@@ -1,23 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
 
-<p>
-  <strong>Body:</strong>
-  <%= raw @post.body %>
-</p>
+<h1 class="post-title"> <%= @post.title %> </h1>
+
+<div class="post-info">
+	<div class="subinfo post-author">
+		<%= render 'author' %>
+	</div>
+
+	<div class="subinfo post-categories">
+		<div class="post-category">
+			Categoria: <%= @category.name %>
+		</div>
+		
+		<div class="post-subcategory">
+			Subcategoria: <%= @subcategory.name %>
+		</div>
+	</div>
+</div>
+<div class="post-body-container">
+	<div class="side post-body">
+		<%= raw @post.body %>
+	</div>
+
+	<div class="side post-right-bar">
+		<div class="right-bar-categories">
+			<h4> CATEGORIAS </h4>
+			<% @categories.each do |category| %>
+				<%= category.name %>
+				<br>
+			<% end %>
+		</div>
+	</div>
+</div>
 
 <% if logged_in? %>
 	<%= link_to 'Edit', edit_post_path(@post) %> |
 	<%= link_to 'Back', posts_path %>
 <% end %>
-
-<br>
-
-<%= render 'author' %>
 
 <br>
 

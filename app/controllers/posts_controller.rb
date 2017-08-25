@@ -13,6 +13,9 @@ class PostsController < ApplicationController
   def show
     @post_comments = Comment.where(post_id: @post.id)
     @author = Author.find_by(id: @post.author_id)
+    @category = Category.find_by(id: @post.category_id)
+    @subcategory = Subcategory.find_by(id: @post.subcategory_id)
+    @categories = Category.all.order(:name)
     @comment = Comment.new
   end
 

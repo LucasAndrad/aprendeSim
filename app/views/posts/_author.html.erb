@@ -1,8 +1,10 @@
-<h3> Autor </h3>
-
-<% if @author.photo != '' && @author.photo != nil %>
-  <%= image_tag @author.photo, width: 50 %>
-<% else %>
-<% end %>
-
-Nome: <%= @author.name %>
+<div class="author">
+	<% if @author.photo != '' && @author.photo != nil %>
+	  <%= image_tag @author.photo, class: 'author-photo' %>
+	<% else %>
+	<% end %>
+</div>
+<div class="author author-info"> 
+	por: <%= @author.name %><br>
+	em: <%= @post.created_at.strftime("%d / %m / %Y") %>
+</div>

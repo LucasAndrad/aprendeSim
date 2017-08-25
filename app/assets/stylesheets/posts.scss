@@ -1,3 +1,72 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* Posts show */
+.post-title {
+	font-size: 500%;
+	text-align: center;
+}
+.post-author {
+}
+.post-categories {
+}
+.post-info {
+	margin-left: auto;
+	margin-right: auto;
+	width: 45%;
+	display: flex;
+	color: #a8a8a8;
+}
+.post-categories {
+	margin-left: 15%;
+}
+.post-category {
+	margin-top: 5%;
+}
+.subinfo{
+	width: 45%;
+}
+.post-body-container {
+	width: 80%;	
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 5%;
+	display: flex;
+}
+.post-body {
+	width: 73%;
+	text-align: justify;
+}
+.post-right-bar {
+	width: 25%;
+	height: 30%;
+}
+.right-bar-categories {
+	max-height: 100%;
+	margin-left: 20%;
+	width: 100%;
+	padding-left: 5%;
+	border-left: solid 5px #1e90ff;
+}
+
+/* Post body style */
+.post-text-p {
+	text-indent: 8%;
+	color: #3d3d3d;
+}
+
+/* Author partial */
+.author {
+	display: inline-block;
+	height: 100%;
+}
+.author-info {
+	height: 100%;
+	padding-left: 5%;
+}
+.author-photo {
+	border-radius: 150px;
+	width: 50px;
+	height: 60px;
+}
