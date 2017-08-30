@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
   end
 
   def show_all
-    @categories = Category.all
+    @categories = Category.all.order(:name)
   end
 
   # GET /categories/new

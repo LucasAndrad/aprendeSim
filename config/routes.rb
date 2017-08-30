@@ -4,12 +4,15 @@ Rails.application.routes.draw do
   
   resources :comments
 
-  resources :subcategories
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 # Categories
   resources :categories
   get 'categorias' => 'categories#show_all', as: 'categories_show_all'
+
+# Subcategories
+  get 'subcategorias/:id' => 'subcategories#show_all', as: 'subcategories_show_all'
+  resources :subcategories
 
 # Managements
   get 'managements/index' => 'managements#index', as: 'managements_index'
