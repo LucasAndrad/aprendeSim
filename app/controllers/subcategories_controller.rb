@@ -1,6 +1,6 @@
 class SubcategoriesController < ApplicationController
   before_action :set_subcategory, only: [:show, :edit, :update, :destroy]
-  before_action :check_log_in
+  skip_before_action :check_log_in, only: [:show_all]
 
   # GET /subcategories
   # GET /subcategories.json
@@ -11,6 +11,10 @@ class SubcategoriesController < ApplicationController
   # GET /subcategories/1
   # GET /subcategories/1.json
   def show
+  end
+
+  def show_all
+    @subcategories = Subcategory.all
   end
 
   # GET /subcategories/new

@@ -1,0 +1,11 @@
+<h1 class="categories-title">Categorias</h1>
+
+<div class="category-group-container">
+	<% @categories.each do |category| %>
+
+		<div class="category-single-container">
+			<%= category.name %>
+		</div>
+
+	<% end %>
+</div>

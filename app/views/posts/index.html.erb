@@ -26,7 +26,7 @@
         <% else %>
 
         <% end %>
-        <td><%= post.body %></td>
+        <td><%= post.intro_text %></td>
         <td><%= link_to 'Show', post_path(post) %></td>
         <% if logged_in? %>
           <td><%= link_to 'Edit', edit_post_path(post) %></td>

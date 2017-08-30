@@ -1,5 +1,6 @@
 class AuthorsController < ApplicationController
   before_action :set_author, only: [:show, :edit, :update, :destroy]
+  skip_before_action :check_log_in, only: [:show]
 
   # GET /authors
   # GET /authors.json
@@ -70,5 +71,11 @@ class AuthorsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def author_params
       params.require(:author).permit(:name, :photo, :description)
+    end
+
+    def check_log_in
+      if logged_in? == false
+        redirect_to home_path
+      end
     end
 end

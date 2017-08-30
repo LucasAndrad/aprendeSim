@@ -4,6 +4,7 @@
 			<li> <%= link_to 'HOME', home_path, class: 'nav-fostrap-link' %> </li>
 			<li> <%= link_to 'SOBRE NÓS', about_path, class: 'nav-fostrap-link' %> </li>
 			<li> <%= link_to 'POSTS', posts_path, class: 'nav-fostrap-link' %> </li>
+			<li> <%= link_to 'CATEGORIAS', categories_show_all_path, class: 'nav-fostrap-link' %> </li>
 
 			<% if logged_in? %>
 				Bem vindo: <%= current_user.name %>

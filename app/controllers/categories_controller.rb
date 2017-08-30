@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
-  before_action :check_log_in
+  before_action :check_log_in, except: [:show_all]
 
   # GET /categories
   # GET /categories.json
@@ -11,6 +11,10 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+  end
+
+  def show_all
+    @categories = Category.all
   end
 
   # GET /categories/new

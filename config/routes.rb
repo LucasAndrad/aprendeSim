@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+
   resources :authors
+  
   resources :comments
+
   resources :subcategories
-  resources :categories
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+# Categories
+  resources :categories
+  get 'categorias' => 'categories#show_all', as: 'categories_show_all'
 
 # Managements
   get 'managements/index' => 'managements#index', as: 'managements_index'
