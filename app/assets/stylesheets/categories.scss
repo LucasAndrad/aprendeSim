@@ -23,6 +23,12 @@
 }
 .category-single-container:hover {
 	background-color: #ababab;
-	color: white;
 	cursor: pointer;
+
+	.category-name {
+		color: white;
+	}
+}
+.category-name {
+	text-decoration: none; color: black;
 }

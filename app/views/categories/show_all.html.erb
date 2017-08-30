@@ -4,7 +4,7 @@
 	<% @categories.each do |category| %>
 
 		<div class="category-single-container">
-			<%= link_to category.name, subcategories_show_all_path(category) %>
+			<%= link_to category.name, subcategories_show_all_path(category), class: 'category-name' %>
 		</div>
 
 	<% end %>
