@@ -6,6 +6,7 @@ class CreatePosts < ActiveRecord::Migration[5.1]
       t.string :front_image
       t.text :intro_text
       t.text :body
+      t.integer :visits
       t.belongs_to :category, index: true
       t.belongs_to :subcategory, index: true
       t.belongs_to :author, index: true

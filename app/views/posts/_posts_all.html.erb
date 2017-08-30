@@ -1,14 +1,34 @@
-<h2> Post Partials </h2>
-
-<% @posts.each do |post| %>
-	<div class="single-post">
-		<h3> <%= post.title %> </h3>
-		<% if post.front_image != '' && post.front_image != nil %>
-			<%= image_tag post.front_image, class: 'post-front-image' %>
-		<% else %>
-
+<div class="posts-all-container">
+	<div class="side posts-all-subcontainer">
+		<% @posts.each do |post| %>
+			<div class="single-post">
+				<h3> <%= link_to post.title, post_path(post), class: 'posts-all-title' %> </h3>
+				<% if post.front_image != '' && post.front_image != nil %>
+					<%= image_tag post.front_image, class: 'post-front-image' %>
+				<% else %> <% end %>
+				<div class="posts-all-intro">
+					<%= post.created_at.strftime("%d/%m/%Y") %> <br>
+					<%= post.intro_text %> <br><br>
+					Visitas: <%= post.visits %> 
+				</div>
+		    <% if logged_in? %>
+		      <%= link_to 'Edit', edit_post_path(post) %>
+		      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+		    <% end %>
+			</div>
 		<% end %>
-		<%= post.intro_text %>
 	</div>
 
-<% end %>
+	<div class="side post-right-bar">
+		<div class="right-bar-categories">
+			<h4> CATEGORIAS </h4>
+			<% @categories.each do |category| %>
+				<%= category.name %>
+				<br>
+			<% end %>
+		</div>
+		<div class="posts-most-views">
+			<h4> MAIS VISTOS </h4>
+		</div>
+	</div>
+</div>

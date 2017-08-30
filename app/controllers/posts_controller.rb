@@ -5,7 +5,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC").limit(10)
+    @categories = Category.all.order(:name)
   end
 
   # GET /posts/1
@@ -17,6 +18,7 @@ class PostsController < ApplicationController
     @subcategory = Subcategory.find_by(id: @post.subcategory_id)
     @categories = Category.all.order(:name)
     @comment = Comment.new
+    @post.increment
   end
 
   # GET /posts/new

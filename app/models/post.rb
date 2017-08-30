@@ -8,4 +8,10 @@ class Post < ApplicationRecord
   def to_param
     url
   end
+
+  def increment()
+    self.visits ||= 0
+    self.visits += 1
+    self.save
+  end
 end

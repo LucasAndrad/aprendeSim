@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20170824123945) do
     t.string "front_image"
     t.text "intro_text"
     t.text "body"
+    t.integer "visits"
     t.bigint "category_id"
     t.bigint "subcategory_id"
     t.bigint "author_id"
