@@ -9,7 +9,7 @@
 				<div class="posts-all-intro">
 					<%= post.created_at.strftime("%d/%m/%Y") %> <br>
 					<%= post.intro_text %> <br><br>
-					Visitas: <%= post.visits %> 
+					<div class="posts-all-visits"> Visitas: <%= post.visits %> </div>
 				</div>
 		    <% if logged_in? %>
 		      <%= link_to 'Edit', edit_post_path(post) %>
@@ -29,6 +29,10 @@
 		</div>
 		<div class="posts-most-views">
 			<h4> MAIS VISTOS </h4>
+			<% @posts_most_views.each do |post_views| %>
+				<%= link_to post_views.title, post_path(post_views), class: 'post-views-title' %>
+				<br>
+			<% end %>
 		</div>
 	</div>
 </div>
