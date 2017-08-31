@@ -1,6 +1,6 @@
 class SubcategoriesController < ApplicationController
   before_action :set_subcategory, only: [:show, :edit, :update, :destroy]
-  before_action :check_log_in, except: [:show_all]
+  before_action :check_log_in, except: [:show_all, :sub_posts]
 
   # GET /subcategories
   # GET /subcategories.json
@@ -16,6 +16,13 @@ class SubcategoriesController < ApplicationController
   def show_all
     @category = Category.find(params[:id])
     @subcategories = Subcategory.where(category_id: @category.id)
+  end
+
+  def sub_posts
+    @subcategory = Subcategory.find(params[:id])
+    @posts = Post.where(subcategory_id: @subcategory.id).order("created_at DESC")
+    @categories = Category.all.order(:name)
+    @posts_most_views = Post.all.order(:visits).limit(15)
   end
 
   # GET /subcategories/new

@@ -1,11 +1,8 @@
 <h1 class="categories-title">Subcategorias</h1>
-
 <div class="category-group-container">
 	<% @subcategories.each do |subcategory| %>
-
 		<div class="category-single-container">
-			<%= link_to subcategory.name, home_path, class: 'category-name' %>
+			<%= link_to subcategory.name, sub_posts_path(subcategory), class: 'category-name' %>
 		</div>
-
 	<% end %>
 </div>

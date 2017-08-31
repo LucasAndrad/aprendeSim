@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   get 'categorias' => 'categories#show_all', as: 'categories_show_all'
 
 # Subcategories
-  get 'subcategorias/:id' => 'subcategories#show_all', as: 'subcategories_show_all'
   resources :subcategories
+  get 'subcategorias/:id' => 'subcategories#show_all', as: 'subcategories_show_all'
+  get 'subcategoria/:id' => 'subcategories#sub_posts', as: 'sub_posts'
 
 # Managements
   get 'managements/index' => 'managements#index', as: 'managements_index'
