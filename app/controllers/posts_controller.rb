@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.order("created_at DESC").limit(10)
     @categories = Category.all.order(:name)
-    @posts_most_views = Post.all.order(:visits).limit(15)
+    @posts_most_views = Post.all.order("visits DESC").limit(15)
   end
 
   # GET /posts/1

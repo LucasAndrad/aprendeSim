@@ -1,6 +1,6 @@
 class AuthorsController < ApplicationController
   before_action :set_author, only: [:show, :edit, :update, :destroy]
-  skip_before_action :check_log_in, only: [:show]
+  before_action :check_log_in, except: [:show]
 
   # GET /authors
   # GET /authors.json

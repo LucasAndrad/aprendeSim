@@ -23,7 +23,7 @@
 		<div class="right-bar-categories">
 			<h4> CATEGORIAS </h4>
 			<% @categories.each do |category| %>
-				<%= category.name %>
+				<%= link_to category.name, subcategories_show_all_path(category), class: 'post-categories-name' %>
 				<br>
 			<% end %>
 		</div>

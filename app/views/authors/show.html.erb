@@ -1,14 +1,12 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Name:</strong>
   <%= @author.name %>
 </p>
 
-<p>
-  <strong>Photo:</strong>
-  <%= @author.photo %>
-</p>
+<% if @author.photo != '' && @author.photo != nil %>
+  <%= image_tag @author.photo, class: 'author-photo' %>
+<% else %>
+<% end %>
 
 <p>
   <strong>Description:</strong>
