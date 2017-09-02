@@ -18,6 +18,7 @@ class PostsController < ApplicationController
     @category = Category.find_by(id: @post.category_id)
     @subcategory = Subcategory.find_by(id: @post.subcategory_id)
     @categories = Category.all.order(:name)
+    @posts_most_views = Post.all.order("visits DESC").limit(15)
     @comment = Comment.new
     @post.increment
   end

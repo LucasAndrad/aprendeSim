@@ -1,17 +1,17 @@
-<p>
-  <strong>Name:</strong>
-  <%= @author.name %>
-</p>
-
-<% if @author.photo != '' && @author.photo != nil %>
-  <%= image_tag @author.photo, class: 'author-photo' %>
-<% else %>
+<div class="author-show-container">
+	<% if @author.photo != '' && @author.photo != nil %>
+	  <%= image_tag @author.photo, class: 'author-show-photo' %>
+	<% else %><% end %>
+	<div class="author-show-info">
+		<div class="author-show-name"> <%= @author.name %> </div>
+		<div class="author-show-description"> 
+			<%= @author.description %> 
+			<div class="author-show-email"><div class="mail icon"> </div> <%= @author.email %> </div>
+		</div>
+	</div>
+	</div>
+</div>
+<% if logged_in? %>
+	<%= link_to 'Edit', edit_author_path(@author) %> |
+	<%= link_to 'Back', authors_path %>
 <% end %>
-
-<p>
-  <strong>Description:</strong>
-  <%= @author.description %>
-</p>
-
-<%= link_to 'Edit', edit_author_path(@author) %> |
-<%= link_to 'Back', authors_path %>

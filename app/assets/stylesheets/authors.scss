@@ -1,3 +1,43 @@
 // Place all the styles related to the Authors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* Author show page */
+.author-show-photo {
+	width: 20%; height: 8%;
+}
+.author-show-info { width: 80%; margin-left: 3%; }
+.author-show-container {
+	width: 80%;
+	margin-top: 5%;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+}
+.author-show-name {
+	background-color: #FA6900;
+	padding: 1% 1%;
+	opacity: 0.9;
+	text-align: center;
+	font-size: 130%;
+	border-radius: 3px;
+}
+.author-show-description {
+	color: #3d3d3d;
+	border-radius: 3px;
+	padding: 1% 2%;
+	margin-top: 1.5%;
+	background-color: #f0f0f0;
+	text-align: justify;
+	text-indent: 25px;
+}
+.author-show-email {
+	margin-top: 5%;
+	text-indent: 30px;
+}
+
+/*Icons for author (email)*/
+.mail.icon {color: #000;position: absolute;margin-left: 2px;margin-top: 4px;width: 15px;height: 10px;border-radius: 1px;border: solid 1px currentColor;}
+.mail.icon:before {content: '';position: absolute;left: 7px;top: -4px;width: 1px;height: 10px;background-color: currentColor;-webkit-transform-origin: bottom;transform-origin: bottom;-webkit-transform: rotate(-54deg);transform: rotate(-54deg);}
+.mail.icon:after {content: '';position: absolute;left: 7px;top: -4px;width: 1px;height: 10px;background-color: currentColor;-webkit-transform-origin: bottom;transform-origin: bottom;-webkit-transform: rotate(54deg);transform: rotate(54deg);
+}
