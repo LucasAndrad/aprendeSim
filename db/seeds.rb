@@ -18,8 +18,10 @@
       { name:  'Leis de Newton', category_id: 4 }])
 
     authors = Author.create([
-      { name: 'Lucas Andrade', photo: 'http://i.imgur.com/bKgTH5z.jpg',
+      { name: 'Lucas Andrade', photo: 'http://i.imgur.com/bKgTH5z.jpg', 
+        email: "lucasandradeunb@gmail.com",
         description: 'Apenas um universitário, atualmente faço Engenharia de Software na Universidade de Brasília. Grande fã de Rails, e já acumulei uma experiência com Angular 2 também.' },
       { name: 'Ana Luisa Krause', photo: 'http://i.imgur.com/kZoNkvO.jpg',
+        email: 'anakrause@gmail.com',
         description: 'Estudante do curso Farmácia '}
     ])
