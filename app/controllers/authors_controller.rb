@@ -11,6 +11,9 @@ class AuthorsController < ApplicationController
   # GET /authors/1
   # GET /authors/1.json
   def show
+    @posts = Post.where(author_id: @author.id)
+    @categories = Category.all.order(:name).limit(10)
+    @posts_most_views = Post.all.order("visits DESC").limit(15)
   end
 
   # GET /authors/new

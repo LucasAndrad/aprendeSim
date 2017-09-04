@@ -8,7 +8,7 @@
 				<% else %> <% end %>
 				<div class="posts-all-intro">
 					<%= post.created_at.strftime("%d/%m/%Y") %> <br>
-					<%= post.intro_text %> <br><br>
+					<%= link_to post.intro_text, post_path(post), class: 'posts-all-intro' %> <%= link_to "Leia mais . . .", post_path(post), class: 'post-categories-name' %> <br><br>
 					<div class="posts-all-visits"> Visitas: <%= post.visits %> </div>
 				</div>
 		    <% if logged_in? %>

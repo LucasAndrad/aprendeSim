@@ -15,3 +15,5 @@
 	<%= link_to 'Edit', edit_author_path(@author) %> |
 	<%= link_to 'Back', authors_path %>
 <% end %>
+<h2 class="posts-index-title"> Publicações de <%= @author.name %> </h2>
+<%= render "posts/posts_all" %>
