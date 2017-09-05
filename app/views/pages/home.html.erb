@@ -1,2 +1,24 @@
-<h1>Aprende Sim</h1>
-<p>Bem vindo ao Aprende Sim</p>
+<ul id="slides">
+	<li class="slide showing">
+		<h1 class="home-page-title"> Bem vindo ao Aprende Sim </h1>
+		<h4 class="home-page-subtitle"> Um site que compartilha conhecimentos sobre qualquer assunto. </h4>
+	</li>
+	<li class="slide">Slide 1</li>
+	<li class="slide">Slide 3</li>
+	<li class="slide">Slide 4</li>
+	<li class="slide">Slide 5</li>
+</ul>
+
+<h1 class="posts-index-title">Últimos Posts</h1>
+<%= render 'posts/posts_all' %>
+
+<script type="text/javascript">
+	var slides = document.querySelectorAll('#slides .slide');
+	var currentSlide = 0;
+	var slideInterval = setInterval(nextSlide,4000);
+	function nextSlide(){
+		slides[currentSlide].className = 'slide';
+		currentSlide = (currentSlide+1)%slides.length;
+		slides[currentSlide].className = 'slide showing';
+	}
+</script>
