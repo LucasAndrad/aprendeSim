@@ -24,6 +24,24 @@ body {
 		margin-top: 25%;
 	}
 }
+/* About */
+.page-about-container {
+	margin-top: 3%;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.page-about-subcontainer {
+	padding-left: 3%;
+	border-left: solid 5px #1e90ff;
+}
+.page-about-text {
+	text-align: justify;
+	text-indent: 3%;
+	color: #3d3d3d;
+	line-height: 1.7em;
+}
+
 /* Footer */
 .footer-container {
 	bottom: 0;
@@ -59,6 +77,10 @@ body {
 	text-indent: 25px;
 	padding-bottom: 3%;
 	display: flex;
+}
+.fa-youtube-square,.fa-facebook-square {
+	text-decoration: none;
+	color: white;
 }
 
 /* Home page Carousel
@@ -121,5 +143,3 @@ just for appearance; change whatever you want
 .heart-solid.icon {color: #2DB4D6;position: absolute;margin-top: 6px;margin-left: 5px;width: 9px;height: 9px;border-left: solid 1px currentColor;border-bottom: solid 1px currentColor;background-color: currentColor;-webkit-transform: rotate(-45deg);transform: rotate(-45deg);}
 .heart-solid.icon:before {content: '';position: absolute;top: -5px;left: -1px;width: 8px;height: 5px;border-radius: 5px 5px 0 0;border-top: solid 1px currentColor;border-left: solid 1px currentColor;border-right: solid 1px currentColor;background-color: currentColor;}
 .heart-solid.icon:after {content: '';position: absolute;top: 0px;left: 8px;width: 5px;height: 8px;border-radius: 0 5px 5px 0;border-top: solid 1px currentColor;border-right: solid 1px currentColor;border-bottom: solid 1px currentColor;background-color: currentColor;}
-
-/* Footer icons */
