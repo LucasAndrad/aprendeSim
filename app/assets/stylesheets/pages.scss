@@ -86,6 +86,12 @@ body {
 /* Home page Carousel
 essential styles: these make the slideshow work
 */
+.home-image-slide1 {
+	position: relative;
+	opacity: 0.5;
+	height: 305px;
+	-webkit-filter: hue-rotate(300deg); filter: hue-rotate(600deg);
+}
 #slides{
 	position: relative;
 	height: 340px;
@@ -104,16 +110,25 @@ essential styles: these make the slideshow work
 	opacity: 0;
 	z-index: 1;
 	-webkit-transition: opacity 1s; -moz-transition: opacity 1s;-o-transition: opacity 1s;
-	transition: opacity 1.5s;
+	transition: opacity 3s;
 }
 .showing{ opacity: 1;z-index: 2; }
 .home-page-title {
+	z-index: 1;
+	padding-left: 5%;
 	text-align: center;
 	font-size: 210%;
+	position: absolute;
+	color: white;
 }
 .home-page-subtitle {
+	padding-top: 6%;
+	color: white;
+	padding-left: 5%;
 	font-size: 120%;
+	z-index: 1;
 	text-align: center;
+	position: absolute;
 }
 /*
 non-essential styles:
@@ -128,15 +143,6 @@ just for appearance; change whatever you want
 }
 .slide:nth-of-type(2){
 	background: orange;
-}
-.slide:nth-of-type(3){
-	background: green;
-}
-.slide:nth-of-type(4){
-	background: blue;
-}
-.slide:nth-of-type(5){
-	background: purple;
 }
 
 /* Heart Icon */
