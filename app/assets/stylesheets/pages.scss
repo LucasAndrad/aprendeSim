@@ -92,7 +92,7 @@ essential styles: these make the slideshow work
 }
 .home-image-slide1 {
 	opacity: 0.5;
-	-webkit-filter: hue-rotate(300deg); filter: hue-rotate(600deg);
+	-webkit-filter: hue-rotate(100deg); filter: hue-rotate(910deg);
 }
 .home-image-slide2 {
 	float: right;
@@ -116,27 +116,29 @@ essential styles: these make the slideshow work
 	height: 90%;
 	opacity: 0;
 	z-index: 1;
-	-webkit-transition: opacity 80s; -moz-transition: opacity 80s;-o-transition: opacity 80s;
+	-webkit-transition: opacity 1s; -moz-transition: opacity 1s;-o-transition: opacity 1s;
 	transition: opacity 1s;
 }
 .showing{opacity:1;z-index:2;}
 .slide-text {
 	position: absolute;
 	z-index: 1;
+	color: black;
+	text-shadow: 2px 1px white;
+	font-family: 'Syncopate', sans-serif;
 }
 .home-page-title {
 	padding-left: 5%;
-	font-size: 210%;
-	color: white;
+	font-size: 300%;
 }
 .home-page-subtitle {
-	padding-top: 6%;
-	color: white;
-	padding-left: 5%;
-	font-size: 120%;
+	padding-top: 10%;
+	padding-left: 3%;
+	font-size: 160%;
+	line-height: 1.8;
 }
 .home-slide2-text {
-	color: white;
+	color: black;
 	padding-left: 5%;
 	width: 60%;
 }
