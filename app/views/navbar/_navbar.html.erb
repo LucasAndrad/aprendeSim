@@ -5,8 +5,6 @@
 			<li> <%= link_to 'POSTS', posts_path, class: 'nav-fostrap-link' %> </li>
 			<li> <%= link_to 'CATEGORIAS', categories_show_all_path, class: 'nav-fostrap-link' %> </li>
 			<li> <%= link_to 'SOBRE NÓS', about_path, class: 'nav-fostrap-link' %> </li>
-			
-
 			<% if logged_in? %>
 				Bem vindo: <%= current_user.name %>
 				<li> <%= link_to 'Painel', managements_index_path, class: 'nav-fostrap-link' %> </li>
@@ -22,18 +20,12 @@
 		<a class="title-mobile">APRENDE SIM</a>
 </div>
 </nav>
-<div class='content'>
-</div>
-</div>
-</div>
-
+<div class='content'></div></div></div>
 <script>
-
 	$(document).ready(function(){
 		$('.navbar-fostrap').click(function(){
 			$('.nav-fostrap').toggleClass('visible');
 			$('body').toggleClass('cover-bg');
 		});
 	});
-
 </script>
