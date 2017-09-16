@@ -3,22 +3,16 @@
   <head>
     <title>Aprende Sim</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
-
   </head>
-
   <body class="application-body">
-
   	<%= render 'navbar/navbar' %>
-    
     <div class="body-container">
       <%= yield %>
     </div>
-
     <footer>
       <%= render 'pages/footer'%>
     </footer>
