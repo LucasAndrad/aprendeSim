@@ -5,6 +5,6 @@
 	<% end %>
 </div>
 <div class="author author-info"> 
-	por: <%= link_to @author.name, @author, class: 'author-name' %><br>
+	autor: <%= link_to @author.name, @author, class: 'author-name' %><br>
 	em: <%= @post.created_at.strftime("%d / %m / %Y") %>
 </div>

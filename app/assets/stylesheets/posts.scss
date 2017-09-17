@@ -6,13 +6,14 @@
 .post-title {
 	font-size: 450%;
 	text-align: center;
+	color: #3d3d3d;
 }
 .post-info {
 	margin-left: auto;
 	margin-right: auto;
-	width: 45%;
+	width: 65%;
 	display: flex;
-	color: #a8a8a8;
+	color: #3d3d3d;
 }
 .post-categories {
 	margin-left: 15%;
@@ -134,6 +135,7 @@
 }
 
 @media only screen and (max-width:800px) {
+/* Posts all partial responsive */
 	.posts-all-container {
 		display: block;
 		width: 100%;
@@ -178,4 +180,66 @@
 	.right-bar-categories {
 		margin-left: 2%;
 	}
+
+	/* Posts show */
+	.post-title {
+		font-size: 200%;
+	}
+	.post-info {
+		width: 100%;
+		display: block;
+	}
+	.author {
+		width: 30%;
+		height: 100%;
+	}
+	.post-author {
+		font-size: 80%;
+		font-weight: bold;
+	}
+	.author-info {
+		width: 80%;
+		text-align: right;
+		margin-right: 0;
+	}
+	.subinfo {
+		width: 80%;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.post-categories {
+		font-size: 80%;
+		font-weight: bold;
+		margin-top: 5%;
+		margin-left: auto;
+		margin-right: auto;
+		width: 90%;
+		text-align: center;
+	}
+	.post-category {
+		margin-top: 0;
+		margin-right: 5%;
+	}
+	.post-body-container {
+		width: 100%;
+		display: block;
+		overflow-x: hidden;
+	}
+	.post-body {
+		width: 95%;
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: 10%;
+	}
 }
+
+@media only screen and (max-width:340px) {
+	.post-title {
+		font-size: 150%;
+	}
+	.post-info {
+		display: block;
+	}
+}
+

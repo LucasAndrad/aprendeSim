@@ -1,18 +1,13 @@
 <p id="notice"><%= notice %></p>
-
-
 <h1 class="post-title"> <%= @post.title %> </h1>
-
 <div class="post-info">
 	<div class="subinfo post-author">
 		<%= render 'author' %>
 	</div>
-
 	<div class="subinfo post-categories">
 		<div class="post-category">
 			Categoria: <%= link_to @category.name, subcategories_show_all_path(@category), class: 'author-name' %>
 		</div>
-		
 		<div class="post-subcategory">
 			Subcategoria: <%= link_to @subcategory.name, sub_posts_path(@subcategory), class: 'author-name' %>
 		</div>
@@ -22,7 +17,6 @@
 	<div class="side post-body">
 		<%= raw @post.body %>
 	</div>
-	
 	<div class="side post-right-bar">
 		<div class="right-bar-categories">
 			<h4> CATEGORIAS </h4>
@@ -40,12 +34,8 @@
 		</div>
 	</div>
 </div>
-
 <% if logged_in? %>
 	<%= link_to 'Edit', edit_post_path(@post) %> |
 	<%= link_to 'Back', posts_path %>
 <% end %>
-
 <br>
-
-<%= render 'comments' %>
