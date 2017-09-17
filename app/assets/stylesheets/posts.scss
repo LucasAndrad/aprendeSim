@@ -7,10 +7,6 @@
 	font-size: 450%;
 	text-align: center;
 }
-.post-author {
-}
-.post-categories {
-}
 .post-info {
 	margin-left: auto;
 	margin-right: auto;
@@ -73,8 +69,8 @@
 	border-radius: 50%;
 	width: 65px;
 	height: 65px;
-
 }
+
 /* Posts index */
 .posts-index-title {
 	font-size: 200%;
@@ -152,7 +148,7 @@
 		width: 100%;
 	}
 	.post-right-bar {
-		width: 60%;
+		width: 100%;
 		margin-bottom: 5%;
 	}
 	.posts-all-title-mobile {
@@ -171,5 +167,15 @@
 	}
 	.single-post {
 		padding-bottom: 15%;
+	}
+	.post-views-title {
+		font-size: 100%;
+	}
+	.posts-most-views {
+		width: 100%;
+		margin-left: 2%;
+	}
+	.right-bar-categories {
+		margin-left: 2%;
 	}
 }

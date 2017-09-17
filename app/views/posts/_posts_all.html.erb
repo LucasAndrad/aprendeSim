@@ -1,5 +1,5 @@
 <div class="posts-all-container">
-	<div class="side posts-all-subcontainer">
+	<div class="posts-all-subcontainer">
 		<% @posts.each do |post| %>
 			<div class="single-post">
 				<h3 class="posts-all-title-mobile"> <%= link_to post.title, post_path(post), class: 'posts-all-title' %> </h3>
@@ -9,7 +9,7 @@
 				<% end %>
 				<div class="posts-all-intro">
 					<div class="post-date"><%= post.created_at.strftime("%d/%m/%Y") %></div>
-					<%= link_to post.intro_text, post_path(post), class: 'posts-all-intro' %> <%= link_to "Leia mais . . .", post_path(post), class: 'post-categories-name' %> 
+					<%= link_to post.intro_text, post_path(post), class: 'posts-all-intro' %> <%= link_to "Leia mais ...", post_path(post), class: 'post-categories-name' %> 
 					<div class="posts-all-visits"> Visitas: <%= post.visits %> </div>
 				</div>
 		    <% if logged_in? %>
@@ -19,7 +19,7 @@
 			</div>
 		<% end %>
 	</div>
-	<div class="side post-right-bar">
+	<div class="post-right-bar">
 		<div class="right-bar-categories">
 			<h4> CATEGORIAS </h4>
 			<% @categories.each do |category| %>
