@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 html {
 	font-family: 'Hind', sans-serif; font-size: 110%; overflow-x: hidden
 }
@@ -22,6 +23,8 @@ body {
 @media only screen and (max-width:470px) {
 	.body-container {
 		margin-top: 25%;
+		margin-left: 3%;
+		margin-right: 3%;
 	}
 }
 /* About */
@@ -103,7 +106,8 @@ body {
 	text-decoration: none;
 	color: white;
 }
-@media only screen and (max-width:740px) {
+/* Footer Mobile */
+@media only screen and (max-width:750px) {
 	.footer-element-title {
 		font-size: 100%;
 		border-bottom: none;
@@ -136,9 +140,7 @@ body {
 		margin-right: auto;
 	}
 }
-/* Home page Carousel
-essential styles: these make the slideshow work
-*/
+/* Home page Carousel */
 .slide-image {
 	height: 305px;
 	position: relative;
@@ -160,6 +162,12 @@ essential styles: these make the slideshow work
 	width: 102%;
 	margin-left: -1%;
 	list-style-type: none;
+}
+.home-image-mobile {
+	display: none;
+}
+.home-image-tablet {
+	display: none;
 }
 .slide{
 	position: absolute;
@@ -209,3 +217,33 @@ essential styles: these make the slideshow work
 .slide:nth-of-type(1){}
 /* Heart Icon */
 .heart-solid.icon:after,.heart-solid.icon:before{content:'';border-top:solid 1px currentColor;border-right:solid 1px currentColor}.heart-solid.icon,.heart-solid.icon:after,.heart-solid.icon:before{position:absolute;background-color:currentColor}.heart-solid.icon{color:#2DB4D6;margin-top:6px;margin-left:5px;width:9px;height:9px;border-left:solid 1px currentColor;border-bottom:solid 1px currentColor;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.heart-solid.icon:before{top:-5px;left:-1px;width:8px;height:5px;border-radius:5px 5px 0 0;border-left:solid 1px currentColor}.heart-solid.icon:after{top:0;left:8px;width:5px;height:8px;border-radius:0 5px 5px 0;border-bottom:solid 1px currentColor}
+
+/* Home page mobile */
+@media only screen and (max-width:900px) {
+	.home-carousel-slides {
+		display: none;
+	}
+	.home-image-tablet {
+		display: block;
+		opacity: 0.8;
+		margin-top: 0%;
+		margin-left: -4%;
+	}
+}
+
+@media only screen and (max-width:745px) {
+	.home-image-tablet {
+		margin-top: -3%;
+	}
+}
+
+@media only screen and (max-width:385px) {
+	.home-image-mobile {
+		display: block;
+		margin-left: -4%;
+		margin-top: -8%;
+	}
+	.home-image-tablet {
+		display: none;
+	}
+}
