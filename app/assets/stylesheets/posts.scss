@@ -110,6 +110,8 @@
 	border-left: solid 5px #FA6900;
 }
 .posts-all-visits {
+	font-weight: bold;
+	margin-top: 5%;
 	text-align: right;
 }
 .post-front-image {
@@ -130,4 +132,44 @@
 }
 .post-categories-name {
 	color: #1E90FF;
+}
+.post-date {
+	font-weight: bold;
+}
+
+@media only screen and (max-width:800px) {
+	.posts-all-container {
+		display: block;
+		width: 100%;
+	}
+	.posts-all-subcontainer {
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.posts-all-title {
+		font-size: 130%;
+		width: 100%;
+	}
+	.post-right-bar {
+		width: 60%;
+		margin-bottom: 5%;
+	}
+	.posts-all-title-mobile {
+		text-align: center;
+	}
+	/* Tamanho da imagem:  279px (largura/width) x 159 px(altura/width) */
+	.post-front-image {
+		width: 98%;
+	}	
+	.posts-all-visits {
+		margin-top: 0;
+	}
+	.posts-index-title {
+		margin-bottom: 0;
+		font-size: 190%;
+	}
+	.single-post {
+		padding-bottom: 15%;
+	}
 }
