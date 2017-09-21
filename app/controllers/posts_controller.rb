@@ -78,6 +78,14 @@ class PostsController < ApplicationController
     end
   end
 
+  def search_posts
+    @search_param = params[:current_search][:search]
+    @posts = Post.where("title ILIKE :search", 
+      :search => "%#{params[:current_search][:search]}%")
+    @categories = Category.all.order(:name).limit(10)
+    @posts_most_views = Post.all.order("visits DESC").limit(15)
+  end
+
   private
     def check_log_in
       if logged_in? == false

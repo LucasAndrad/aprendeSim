@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   resources :authors
-  
   resources :comments
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -23,6 +22,7 @@ Rails.application.routes.draw do
   get 'about' => 'pages#about', as: 'about'
 
 # Posts
+  post 'resultado-da-busca' => 'posts#search_posts', as: 'search_posts'
   resources :posts, param: :url
 
 # Users

@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
-
 <h1 class="posts-index-title">Posts mais recentes</h1>
+
+<%= form_for(:current_search, url: search_posts_path) do |f|%>
+	 		<%= f.text_field :search, placeholder: "Buscar Posts", class: '' %>
+<%= button_tag(type: "submit") do %>
+<i class="fa fa-search fa-lg"></i>
+			<% end %>
+<% end %>
 
 <% if logged_in? %>
   <%= link_to 'New Post', new_post_path %>
