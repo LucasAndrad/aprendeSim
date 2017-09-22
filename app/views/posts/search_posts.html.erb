@@ -1,8 +1,6 @@
 <% if @posts.present? %>
-		<h1> Posts encontrados </h1>
-		<% @posts.each do |post| %>
-			<%= render 'posts_all' %>
-		<% end %>
-	<% else %>
-		<h1> Nenhum post encontrado </h1>		
+	<h1> Posts encontrados </h1>
+	<%= render 'posts_all' %>
+<% else %>
+	<h1> Nenhum post encontrado </h1>		
 <% end %>

@@ -1,3 +1,11 @@
+<div class="search-bar-container">
+	<%= form_for(:current_search, url: search_posts_path) do |f|%>
+		<%= f.text_field :search, placeholder: "Buscar Posts", class: 'search-bar' %>
+		<%= button_tag(type: "submit", class: 'search-bar-button') do %>
+			<i class="fa fa-search fa-lg"></i>
+		<% end %>
+	<% end %>
+</div>
 <div class="posts-all-container">
 	<div class="posts-all-subcontainer">
 		<% @posts.each do |post| %>
