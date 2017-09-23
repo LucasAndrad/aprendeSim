@@ -2,6 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* Post Body */
+.youtube-video {
+	width: 100%;
+	height: 390px;
+}
+.post-body-image {
+	width: 100%;
+	height: 390px;	
+}
+.post-text-p {
+	text-indent: 8%;
+	color: #3d3d3d;
+	line-height: 1.7em;
+}
+@media only screen and (max-width:510px) {
+	.youtube-video {
+		height: 320px;
+	}
+	.post-body-image {
+		height: 300px;	
+	}
+}
+@media only screen and (max-width:380px) {
+	.youtube-video {
+		height: 280px;
+	}
+	.post-body-image {
+		height: 220px;	
+	}	
+}
 /* Posts show */
 .post-title {
 	font-size: 450%;
@@ -45,13 +75,6 @@
 	width: 100%;
 	padding-left: 5%;
 	border-left: solid 5px #1e90ff;
-}
-
-/* Post body style */
-.post-text-p {
-	text-indent: 8%;
-	color: #3d3d3d;
-	line-height: 1.7em;
 }
 
 /* Author partial */
