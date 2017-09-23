@@ -1,61 +1,73 @@
-<%= form_with(model: post, local: true) do |form| %>
-  <% if post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+<div class="post-form">
+  <%= form_with(model: post, local: true) do |form| %>
+    <% if post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-      <ul>
-      <% post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :title %>
+      </br>
+      <%= form.text_field :title, id: :post_title, class: 'post-form-small-field' %>
+    </div>
+
+     </br>
+      <%= form.label "Author" %>
+      </br>
+      <%= form.select :author_id, @authors.collect {|a| [a.name, a.id]}, {}, { id: 'select-author', class: 'post-form-small-field' } %>
+    </br>
+
+    </br>
+      <%= form.label "Category" %>
+      </br>
+      <%= form.select :category_id, @categories.collect {|c| [c.name, c.id]}, {}, { id: 'select-category', class: 'post-form-small-field' } %>
+    </br>
+
+    </br>
+      <%= form.label "Subcategory" %>
+      </br>
+      <%= form.select :subcategory_id, @subcategories.collect {|s| [s.name, s.id]}, {}, { class: 'post-form-small-field' } %>
+    </br>
+    </br>
+
+    <div class="field">
+      <%= form.label :front_image %>
+      </br>
+      <%= form.text_field :front_image, id: :post_front_image, class: 'post-form-small-field' %>
+    </div>
+    </br>
+
+    <div class="field">
+      <%= form.label :url %>
+      </br>
+      <%= form.text_field :url, id: :post_url, class: 'post-form-small-field' %>
+    </div>
+    </br>
+
+    <div class="field">
+      <%= form.label :body %>
+      <%= form.text_area :body, id: :post_body, class: 'post-form-body' %>
+    </div>
+    </br>
+
+    <div class="field">
+      <%= form.label :intro_text %>
+      <%= form.text_area :intro_text, id: :post_intro_text, class: 'post-form-intro-body' %>
+    </div>
+    </br>
+
+    <div class="actions">
+      <%= form.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :post_title %>
-  </div>
-
-   </br>
-    <%= form.label "Author" %>
-    <%= form.select :author_id, @authors.collect {|a| [a.name, a.id]}, {}, { id: 'select-author' } %>
-  </br>
-
-  </br>
-    <%= form.label "Category" %>
-    <%= form.select :category_id, @categories.collect {|c| [c.name, c.id]}, {}, { id: 'select-category' } %>
-  </br>
-
-  </br>
-    <%= form.label "Subcategory" %>
-    <%= form.select :subcategory_id, @subcategories.collect {|s| [s.name, s.id]} %>
-  </br>
-
-  <div class="field">
-    <%= form.label :front_image %>
-    <%= form.text_field :front_image, id: :post_front_image %>
-  </div>
-
-  <div class="field">
-    <%= form.label :url %>
-    <%= form.text_field :url, id: :post_url %>
-  </div>
-
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body, id: :post_body %>
-  </div>
-
-  <div class="field">
-    <%= form.label :intro_text %>
-    <%= form.text_area :intro_text, id: :post_intro_text %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-
+</div>
 <script type="text/javascript">
   $("#select-category").change(function() {
     let id_value = $("#select-category").val();
