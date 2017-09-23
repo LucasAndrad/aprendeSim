@@ -1,24 +1,7 @@
-# README
+# Aprende Sim
+Aprende Sim it's a Brazilian blog to share knowledge in portugues with short and objective posts
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Setup
+- [x] Rails 5.1.1
+- [x] Ruby 2.3.1
+- [x] Pg gem 0.18
