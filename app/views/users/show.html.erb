@@ -1,1 +1,10 @@
-show.html.erb
+<h1> Atualizar Senha </h1>
+<%= form_for(@user, url: {action: "update_password", params: {id: @user.id}}) do |update| %>
+	<%= update.password_field :password_older, placeholder: "Senha atual" %>
+	</br>
+	<%= update.password_field :password, placeholder: "Nova senha" %>
+	</br>
+	<%= update.password_field :password_confirmation, placeholder: "Confirme sua senha" %>
+	</br>
+	<%= update.submit "Atualizar senha" %>
+<% end %>
