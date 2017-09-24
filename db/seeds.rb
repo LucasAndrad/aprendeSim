@@ -5,7 +5,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
     user = User.create([{ name: 'Lucas Oliveira', email: 'lucas@email.com', email_confirmation: 'lucas@email.com',
-      login: 'lucas', password: 'lucas', password_confirmation: 'lucas', admin: 'true' }])
+      login: 'lucas', password: 'lucas', password_confirmation: 'lucas', active: true, admin: true }])
 
     categories = Category.create([
       { name: 'Matemática' }, { name: 'Biologia' },

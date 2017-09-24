@@ -48,12 +48,15 @@ class User < ApplicationRecord
 
   def init
     self.admin ||= false
+    self.active ||= false
   end
 
   def first_user
     if User.count == 0
+      self.active ||= true
       self.admin ||= true
     else
+      self.active ||= false
       self.admin ||= false
     end
   end

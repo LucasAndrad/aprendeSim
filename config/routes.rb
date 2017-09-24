@@ -34,8 +34,8 @@ Rails.application.routes.draw do
   get 'users/destroy'
 
 # Sessions
-  get 'login' => 'sessions#new', as: 'login'
-  post 'login' => 'sessions#create'
+  get 'admin_login' => 'sessions#new', as: 'login'
+  post 'admin_login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'
 
 end
