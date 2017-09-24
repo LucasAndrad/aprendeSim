@@ -237,10 +237,10 @@ body {
 	margin: 58% 0;
 	border: none;
 	background: #ffffff;
-
 }
 .search-bar:focus {
 	border: solid 2px #1E90FF;
+	outline: none;
 }
 .search-bar-button {
 	background-color: #ffffff;

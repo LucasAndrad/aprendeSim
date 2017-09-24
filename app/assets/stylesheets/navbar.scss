@@ -71,6 +71,12 @@
     overflow-x: hidden;
     height: 100%;
   }
+  .nav-fostrap li a {
+    transition: border-top 0s;
+  }
+  .nav-fostrap li:hover a {
+    border-top: 4px solid #03A9F4;
+  }
   .title-mobile {
     margin-top: 3%;
     display: block;
