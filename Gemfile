@@ -5,7 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Add Ruby version for heroku deploy
 ruby "2.3.1"
+
+# My list of gems
+gem "font-awesome-rails"
 
 # Bcrypt to protect password in login
 gem 'bcrypt', :require => 'bcrypt'
