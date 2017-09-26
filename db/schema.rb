@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20170824123945) do
     t.string "title"
     t.string "url"
     t.string "front_image"
+    t.string "image_name"
     t.text "intro_text"
     t.text "body"
     t.integer "visits"

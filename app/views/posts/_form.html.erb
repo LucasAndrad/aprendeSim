@@ -15,7 +15,7 @@
     <div class="field">
       <%= form.label :title %>
       </br>
-      <%= form.text_field :title, id: :post_title, class: 'post-form-small-field' %>
+      <%= form.text_field :title, id: :post_title, placeholder: 'Título',class: 'post-form-small-field' %>
     </div>
 
      </br>
@@ -40,26 +40,33 @@
     <div class="field">
       <%= form.label :front_image %>
       </br>
-      <%= form.text_field :front_image, id: :post_front_image, class: 'post-form-small-field' %>
+      <%= form.text_field :front_image, id: :post_front_image, placeholder: '279px (largura/width) x 159 px(altura/width)', class: 'post-form-small-field' %>
+    </div>
+    </br>
+
+    <div class="field">
+      <%= form.label :image_name %>
+      </br>
+      <%= form.text_field :image_name, id: :post_image_name, placeholder: 'Nome da imagem', class: 'post-form-small-field' %>
     </div>
     </br>
 
     <div class="field">
       <%= form.label :url %>
       </br>
-      <%= form.text_field :url, id: :post_url, class: 'post-form-small-field' %>
+      <%= form.text_field :url, id: :post_url, placeholder: 'URL', class: 'post-form-small-field' %>
     </div>
     </br>
 
     <div class="field">
       <%= form.label :body %>
-      <%= form.text_area :body, id: :post_body, class: 'post-form-body' %>
+      <%= form.text_area :body, id: :post_body, value: @body_value, class: 'post-form-body' %>
     </div>
     </br>
 
     <div class="field">
       <%= form.label :intro_text %>
-      <%= form.text_area :intro_text, id: :post_intro_text, class: 'post-form-intro-body' %>
+      <%= form.text_area :intro_text, id: :post_intro_text, placeholder: 'Texto de introdução', class: 'post-form-intro-body' %>
     </div>
     </br>
 

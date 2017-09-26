@@ -29,6 +29,7 @@ class PostsController < ApplicationController
     @categories = Category.all.order(:name)
     @authors = Author.all.order(:name)
     @post = Post.new
+    @body_value = '<h2 class="post-text-h2"> </h2> <h3 class="post-text-h3"> </h3> <p class="post-text-p"> </p>'
   end
 
   # GET /posts/1/edit
@@ -36,6 +37,7 @@ class PostsController < ApplicationController
     @subcategories = Subcategory.all.order(:name)
     @categories = Category.all.order(:name)
     @authors = Author.all.order(:name)
+    @body_value = @post.body
   end
 
   # POST /posts
@@ -101,6 +103,6 @@ class PostsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.require(:post).permit(:title, :url, :body, :intro_text, 
-        :front_image, :category_id, :subcategory_id, :author_id)
+        :front_image, :image_name, :category_id, :subcategory_id, :author_id)
     end
 end
