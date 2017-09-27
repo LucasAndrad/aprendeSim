@@ -22,3 +22,33 @@
     js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10&appId=1795767700709083";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
+
+// Compatibility with Turbolinks 5
+(function($) {
+  var fbRoot;
+
+  function saveFacebookRoot() {
+    if ($('#fb-root').length) {
+      fbRoot = $('#fb-root').detach();
+    }
+  };
+
+  function restoreFacebookRoot() {
+    if (fbRoot != null) {
+      if ($('#fb-root').length) {
+        $('#fb-root').replaceWith(fbRoot);
+      } else {
+        $('body').append(fbRoot);
+      }
+    }
+
+    if (typeof FB !== "undefined" && FB !== null) { // Instance of FacebookSDK
+      FB.XFBML.parse();
+    }
+  };
+
+  document.addEventListener('turbolinks:request-start', saveFacebookRoot)
+  document.addEventListener('turbolinks:load', restoreFacebookRoot)
+}(jQuery));
+
+	

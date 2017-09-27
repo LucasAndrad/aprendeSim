@@ -9,7 +9,7 @@ end
 ruby "2.3.1"
 
 # My list of gems
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 
 # Bcrypt to protect password in login
 gem 'bcrypt', :require => 'bcrypt'
