@@ -41,7 +41,14 @@
 .post-body-link:hover {
 	color: blue;
 	text-decoration: underline;
-} 
+}
+.post-body-script {
+	font-size: 95%;
+	text-align: left;
+	padding: 1% 3%;
+	background-color: #e0e0e0;
+	border-radius: 2px;
+}
 @media only screen and (max-width:510px) {
 	.youtube-video {
 		height: 320px;
