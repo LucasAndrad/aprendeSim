@@ -1,0 +1,100 @@
+$icons-color: #f5f5f5e7;
+$blue-details: #2db4d6;
+.vertical-menu {
+  width: 20%;
+  margin-left: 0;
+  position: fixed;
+  height: 100%;
+  background-color: #2C2C2F;
+  color: #fff
+}
+.application-container {
+  width: 80%;
+  margin-right: 0;
+  height: 2000px;
+}
+.profile-image {
+  border-radius: 50%;
+  width: 60%;
+  margin-top: 10%;
+  margin-left: 20%;
+}
+.vertical-menu-links {
+  margin-top: 10%;
+  padding: 3% 0%;
+  background-color: #0e101e;
+  text-align: center;
+}
+@mixin icons-default {
+  font-size: 170%;
+  color: $icons-color;
+}
+.fa.fa-folder {
+  margin-top: 5%;
+  padding-right: 3%;
+  padding-left: 10%;
+  color: $icons-color;
+}
+.fa.fa-home {
+  @include icons-default;
+  margin-right: 5%;
+}
+.fa.fa-user {
+  @include icons-default;
+  margin-left: 5%;
+}
+.fa.fa-angle-down {
+  font-weight: 900;
+  font-size: 110%;
+  margin-left: 50%;
+  color: $icons-color;
+}
+.fa.fa-home:hover, .fa.fa-user:hover {
+  color: #2db4d6;
+}
+/*
+MENUS DROP DOWNS
+https://codepen.io/daniesy/pen/pfxFi
+https://codepen.io/sazzad/pen/pqlgy
+*/
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #4b4949;
+  width: 100%;
+  overflow: auto;
+  color: #fff;
+  z-index: 1;
+}
+.dropdown-content a:hover {
+  color:$blue-details;
+}
+.dropdown-content a {
+  color: #fff;
+  font-size: 80%;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  padding-left: 18%;
+}
+.show {
+  display:block;
+}
+.navbar-posts {
+  background: transparent;
+  border: none;
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 2%;
+}
+.navbar-posts:hover {
+  color: $blue-details;
+  .fa.fa-folder {
+    color: $blue-details;
+  }
+  .fa.fa-angle-down {
+    color: $blue-details;
+  }
+}

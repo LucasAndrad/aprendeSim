@@ -1,0 +1,22 @@
+<nav class="vertical-menu">
+   <%= image_tag("lucas-cut.png", class: "profile-image") %>
+
+  <div class="vertical-menu-links">
+    <%= link_to '<i class="fa fa-home"></i>'.html_safe, home_path %>
+    <%= link_to '<i class="fa fa-user"></i>'.html_safe, about_path %>
+  </div>
+
+  <div class="navbar-containers">
+  
+    <div onclick="toggleNavbar()" class="dropbtn navbar-posts">
+      <i class="fa fa-folder navbar-posts-folder"></i> Posts <i class="fa fa-angle-down"></i>
+    </div>
+
+    <div id="myDropdown" class="dropdown-content">
+    <% navbar_posts.each do |post| %> 
+      <%= link_to post.title, post_path(post), class: 'posts-dropdown-list' %>
+    <% end %>
+    </div>
+
+  </div>
+</nav>
