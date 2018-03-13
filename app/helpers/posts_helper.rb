@@ -5,12 +5,11 @@ module PostsHelper
   end
 
   def subcategory_icon(id)
-    subcategory = Subcategory.find_by_id(id)
-    if subcategory
-      # pq ta indo vazio? nullo?
+    subcategory = Subcategory.find(id)
+    if subcategory.icon && subcategory.icon != nil
       subcategory.icon.to_s
     else
-      'icons/ruby-icon.png'
+      'icons/code-icon.svg'
     end
   end
 end
