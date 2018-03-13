@@ -14,7 +14,10 @@
 
     <div id="myDropdown" class="dropdown-content">
     <% navbar_posts.each do |post| %> 
-      <%= link_to post.title, post_path(post), class: 'posts-dropdown-list' %>
+      <div class="dropdown-element">
+        <%= image_tag(subcategory_icon(post.subcategory_id), class: 'post-icon') %>
+        <%= link_to post.title, post_path(post) %>
+       </div>
     <% end %>
     </div>
 
