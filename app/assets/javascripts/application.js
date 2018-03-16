@@ -54,7 +54,7 @@
 /* Toggle on navbar
 When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
-function toggleNavbar() {
+function togglePosts() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
@@ -73,4 +73,10 @@ window.onclick = function(event) {
   }
 }
 
+// toggle for vertical navbar
+$("#navbar-toggle").click(function() {
+  console.log('clicou na poha no toggle');
+  $(this).toggleClass("on");
+  $("#menu").slideToggle();
+});
 	

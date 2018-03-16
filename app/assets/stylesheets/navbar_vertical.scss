@@ -105,3 +105,46 @@ https://codepen.io/sazzad/pen/pqlgy
     color: $blue-details;
   }
 }
+.navbar-toggle-button {
+  display: block;
+}
+
+/* Navbar vertical mobile */
+/* From https://codepen.io/jaflo/pen/hjuai */
+@media only screen and (max-width:1070px) {
+  .vertical-menu {
+    display: none;
+  }
+  .navbar-toggle-button {
+    position: fixed;
+    margin-top: 5%;
+    margin-left: 5%;
+    display: true;
+    cursor: pointer;
+    width: 28px;
+    height: 30px;
+    background-color: #1e90ff;
+    padding: 20px;
+    border-radius: 50%;
+  }
+  
+  .navbar-toggle-button div {
+    height: 5px;
+    background: white;
+    margin: 4px auto;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+  }
+  
+  .navbar-toggle-button.on .one {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .navbar-toggle-button.on .two {
+    opacity: 0;
+  }
+  
+  .navbar-toggle-button.on .three {
+    transform: rotate(-45deg) translate(7px, -8px);
+  }
+}

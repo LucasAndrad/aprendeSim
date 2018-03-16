@@ -120,7 +120,7 @@
 }
 .right-bar-categories {
 	max-height: 100%;
-	margin-left: 14%;
+	margin-left: 20%;
 	width: 100%;
 	padding-left: 5%;
 	border-left: solid 5px #1e90ff;
@@ -149,7 +149,7 @@
 	font-size: 180%;
 	text-decoration: none;
 	color: #1E90FF;
-	text-align: center;
+	margin-left: 30%;
 }
 
 /* Posts all Partial */
@@ -161,20 +161,20 @@
 }
 .posts-all-container {
 	display: flex;
-	width: 90%;
+	width: 95%;
 	margin-right: auto;
 	margin-left: auto;
 }
 .posts-all-subcontainer {
-	width: 60%;
-	margin-left: 10%;
+	width: 65%;
+	margin-left: 5%;
 }
 .single-post {
 	border-bottom: solid 1px #b5b5b5;
 	padding-bottom: 7%;
 }
 .posts-most-views {
-	margin-left: 14%;
+	margin-left: 20%;
 	padding-left: 5%;
 	border-left: solid 5px #FA6900;
 }

@@ -1,4 +1,9 @@
-<nav class="vertical-menu">
+<div class="navbar-toggle-button" id="navbar-toggle">
+  <div class="one"></div>
+  <div class="two"></div>
+  <div class="three"></div>
+</div>
+<nav class="vertical-menu" id="menu">
    <%= image_tag "lucas-cut.png", class: "profile-image" %>
 
   <div class="vertical-menu-links">
@@ -8,7 +13,7 @@
 
   <div class="navbar-containers">
   
-    <div onclick="toggleNavbar()" class="dropbtn navbar-posts">
+    <div onclick="togglePosts()" class="dropbtn navbar-posts">
       <i class="fa fa-folder navbar-posts-folder"></i> Posts <i class="fa fa-angle-down"></i>
     </div>
     <div id="myDropdown" class="dropdown-content">
@@ -19,6 +24,5 @@
        </div>
     <% end %>
     </div>
-
   </div>
 </nav>
