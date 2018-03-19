@@ -43,13 +43,24 @@ $blue-details: #2db4d6;
   @include icons-default;
   margin-left: 5%;
 }
-.fa.fa-angle-down {
+.fa.fa-file {
+  @include icons-default;
+  font-size: 130%;
+}
+@mixin left-icons {
   font-weight: 900;
   font-size: 110%;
   margin-left: 40%;
   color: $icons-color;
 }
-.fa.fa-home:hover, .fa.fa-user:hover {
+.fa.fa-angle-down {
+  @include left-icons;
+}
+.fa.fa-plus-circle {
+  @include left-icons;
+  margin-left: 25%;
+}
+.fa.fa-home:hover, .fa.fa-user:hover, .fa.fa-file:hover {
   color: #2db4d6;
 }
 .post-icon {
@@ -88,20 +99,33 @@ https://codepen.io/sazzad/pen/pqlgy
 .show {
   display:block;
 }
+.navbar-categories a {
+  color: $icons-color;
+  text-decoration: none;
+}
 .navbar-posts {
   background: transparent;
   border: none;
   width: 100%;
-  color: #fff;
+  color: $icons-color;
   cursor: pointer;
   margin-bottom: 2%;
 }
-.navbar-posts:hover {
+@mixin hover-default {
   color: $blue-details;
   .fa.fa-folder {
     color: $blue-details;
   }
+}
+.navbar-posts:hover {
+  @include hover-default;
   .fa.fa-angle-down {
+    color: $blue-details;
+  }
+}
+.navbar-categories:hover, .navbar-categories a:hover {
+  @include hover-default;
+  .fa.fa-plus-circle {
     color: $blue-details;
   }
 }
@@ -131,7 +155,6 @@ https://codepen.io/sazzad/pen/pqlgy
     border-radius: 50%;
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.2),0 5px 5px 0 rgba(0,0,0,0.24);
   }
-  
   .navbar-toggle-button div {
     height: 5px;
     background: white;
@@ -163,5 +186,8 @@ https://codepen.io/sazzad/pen/pqlgy
   }
   .navbar-toggle-button.on {
     margin-left: 65%;
+  }
+  .fa.fa-plus-circle {
+    margin-left: 21%;
   }
 }
