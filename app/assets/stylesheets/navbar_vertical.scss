@@ -109,8 +109,6 @@ https://codepen.io/sazzad/pen/pqlgy
   display: block;
 }
 
-/* Navbar vertical Tablet */
-
 /* Navbar vertical Tablet mobile toggle logic */
 /* From https://codepen.io/jaflo/pen/hjuai */
 @media only screen and (max-width:1070px) {
@@ -155,5 +153,15 @@ https://codepen.io/sazzad/pen/pqlgy
   }
   .navbar-toggle-button.on .three {
     transform: rotate(-45deg) translate(7px, -8px);
+  }
+}
+
+/* Navbar vertical smartphone mobile toggle logic */
+@media only screen and (max-width:470px) {
+  .vertical-menu {
+    width: 70%;
+  }
+  .navbar-toggle-button.on {
+    margin-left: 65%;
   }
 }

@@ -9,13 +9,15 @@ body {
 }
 .body-container {
 	opacity: 1;
+	overflow-x: hidden;
 	padding-left: 20%;
 }
-@media only screen and (max-width:750px) {
+@media only screen and (max-width:800px) {
 	.body-container {
 		margin-top: 15%;
-		margin-left: 4%;
-		margin-right: 4%;
+		margin-left: 10%;
+		margin-right: 10%;
+		padding-left: 0;
 	}
 }
 @media only screen and (max-width:470px) {
@@ -23,6 +25,7 @@ body {
 		margin-top: 25%;
 		margin-left: 3%;
 		margin-right: 3%;
+		padding-left: 0;
 	}
 }
 /* About */
@@ -195,9 +198,15 @@ body {
 	cursor: pointer;
 }
 /* Search bar responsive code */
+@media only screen and (max-width:800px) { 
+	.search-bar-container {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
 @media only screen and (max-width:745px) {
 	.search-bar-container {
-		width: 60%;
+		width: 65%;
 		margin-bottom: 2%;
 		padding-left: 8%;
 	}

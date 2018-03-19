@@ -205,6 +205,11 @@
 .post-date {
 	font-weight: bold;
 }
+@media only screen and (max-width:1070px) {
+	.posts-index-title {
+		margin-left: 25%;
+	}
+}
 
 @media only screen and (max-width:800px) {
 /* Posts all partial responsive */
@@ -238,6 +243,8 @@
 	.posts-index-title {
 		margin-bottom: 0;
 		font-size: 180%;
+		margin-left: 0;
+		text-align: center;
 	}
 	.single-post {
 		padding-bottom: 15%;
