@@ -73,10 +73,13 @@ window.onclick = function(event) {
   }
 }
 
-// toggle for vertical navbar
-$("#navbar-toggle").click(function() {
-  console.log('clicou na poha no toggle');
-  $(this).toggleClass("on");
-  $("#menu").slideToggle();
-});
+function backgroundOpacity() {
+  var bodyContainer = document.getElementsByClassName('body-container');
+  if(bodyContainer.style.opacity == '1') {
+    bodyContainer.style.opacity = "0.1";
+  }
+  else {
+    bodyContainer.style.opacity = "1";
+  }
+}
 	

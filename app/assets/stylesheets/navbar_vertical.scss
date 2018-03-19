@@ -46,7 +46,7 @@ $blue-details: #2db4d6;
 .fa.fa-angle-down {
   font-weight: 900;
   font-size: 110%;
-  margin-left: 50%;
+  margin-left: 40%;
   color: $icons-color;
 }
 .fa.fa-home:hover, .fa.fa-user:hover {
@@ -109,23 +109,29 @@ https://codepen.io/sazzad/pen/pqlgy
   display: block;
 }
 
-/* Navbar vertical mobile */
+/* Navbar vertical Tablet */
+
+/* Navbar vertical Tablet mobile toggle logic */
 /* From https://codepen.io/jaflo/pen/hjuai */
 @media only screen and (max-width:1070px) {
   .vertical-menu {
     display: none;
+    z-index: 1;
+    width: 40%;
   }
   .navbar-toggle-button {
     position: fixed;
+    z-index: 2;
     margin-top: 5%;
     margin-left: 5%;
     display: true;
     cursor: pointer;
     width: 28px;
     height: 30px;
-    background-color: #1e90ff;
+    background-color: #1e8fffd7;
     padding: 20px;
     border-radius: 50%;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2),0 5px 5px 0 rgba(0,0,0,0.24);
   }
   
   .navbar-toggle-button div {
@@ -135,15 +141,18 @@ https://codepen.io/sazzad/pen/pqlgy
     transition: all 0.3s;
     backface-visibility: hidden;
   }
-  
+  .navbar-toggle-button.on {
+    margin-left: 35%;
+  }
+  .navbar-toggle-button{
+    transition: all 0.6s;
+  }
   .navbar-toggle-button.on .one {
     transform: rotate(45deg) translate(5px, 5px);
   }
-  
   .navbar-toggle-button.on .two {
     opacity: 0;
   }
-  
   .navbar-toggle-button.on .three {
     transform: rotate(-45deg) translate(7px, -8px);
   }

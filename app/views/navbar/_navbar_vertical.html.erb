@@ -26,3 +26,16 @@
     </div>
   </div>
 </nav>
+<script type="text/javascript">
+// toggle for vertical navbar
+$("#navbar-toggle").click(function() {
+  $(this).toggleClass("on");
+  $("#menu").animate({width: 'toggle'});
+  if($(".body-container").css("opacity") == "1") {
+    $(".body-container").css("opacity", "0.1");
+  }
+  else {
+   $(".body-container").css("opacity", "1");
+  }
+});
+</script>
